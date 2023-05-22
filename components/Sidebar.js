@@ -20,6 +20,7 @@ const Sidebar = () => {
       <div className="flex items-center justify-center w-14 h-14 hoverEffect p-0 xl:ml-24">
         {/* <BsTwitter className="text-white text-[34px]" /> */}
         <Image src={Logo} width={300} alt="Logo" />
+        <span className="ml-2 text-white text-lg font-bold">facefamily</span>
       </div>
       <div className="space-y-2 mt-4 mb-2.5 xl:ml-24">
         <SidebarLink text="Home" Icon={AiFillHome} />
@@ -32,7 +33,7 @@ const Sidebar = () => {
         <SidebarLink text="More" Icon={HiOutlineDotsCircleHorizontal} />
       </div>
 
-      <button className="hidden xl:inline ml-auto bg-[#1d9bf0] text-white rounded-full w-52 h-[52px] text-lg font-bold hover:bg-[#1a8cd8]">
+      <button className="hidden xl:inline ml-auto bg-[#C4C595] text-white rounded-full w-52 h-[52px] text-lg font-bold hover:bg-[#1a8cd8]">
         POST
       </button>
 
