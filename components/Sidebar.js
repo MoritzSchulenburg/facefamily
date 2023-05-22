@@ -9,6 +9,8 @@ import {
   HiOutlineDotsCircleHorizontal,
 } from "react-icons/hi";
 import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
+import Logo from "../public/TreeLogo.png";
 
 const Sidebar = () => {
   const { data: session } = useSession();
@@ -16,7 +18,8 @@ const Sidebar = () => {
   return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full border-r border-gray-400 pr-0 xl:pr-8">
       <div className="flex items-center justify-center w-14 h-14 hoverEffect p-0 xl:ml-24">
-        <BsTwitter className="text-white text-[34px]" />
+        {/* <BsTwitter className="text-white text-[34px]" /> */}
+        <Image src={Logo} width={300} alt="Logo" />
       </div>
       <div className="space-y-2 mt-4 mb-2.5 xl:ml-24">
         <SidebarLink text="Home" Icon={AiFillHome} />
@@ -30,7 +33,7 @@ const Sidebar = () => {
       </div>
 
       <button className="hidden xl:inline ml-auto bg-[#1d9bf0] text-white rounded-full w-52 h-[52px] text-lg font-bold hover:bg-[#1a8cd8]">
-        Tweet
+        POST
       </button>
 
       <div
