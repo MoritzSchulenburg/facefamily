@@ -13,7 +13,9 @@ const Login = () => {
         <Image src={Logo} width={300} alt="Logo" />
       </div>
 
-      <div className="grid place-items-center">
+      {/* <div className="grid place-items-center"> */}
+      {/* <div className="bg-[#6EA494] h-screen grid place-items-center"> */}
+      <div className="bg-[#C4C595] h-screen grid place-items-center">
         <div
           className="flex gap-4 bg-[#fff] p-4 px-6 items-center rounded-[6px] cursor-pointer"
           onClick={() => signIn("google")}
