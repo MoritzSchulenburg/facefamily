@@ -25,7 +25,7 @@ const Input = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // This adds the image that I want to add when i press the image icon in homE:
+  // This adds the image that I want to add when i press the image icon in homE still not really uploading the picture!!! further down another code!!:
   const addImageToPost = (e) => {
     const reader = new FileReader();
     if (e.target.files[0]) {
@@ -58,7 +58,7 @@ const Input = () => {
       text: input,
       timestamp: serverTimestamp(),
     });
-    // uploading and storage from the image I take from the file:
+    // uploading and storage from the image I take from the file still not really uploading the picture here!!!:
     const imageRef = ref(storage, `posts/${docRef.id}/image`);
 
     if (selectedFile) {
@@ -135,7 +135,7 @@ const Input = () => {
               </div>
 
               <button
-                className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#1a8cd8] disabled:hover:bg-[#1d9bf0] disabled:opacity-50 disabled:cursor-default"
+                className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#6e767d] disabled:hover:bg-[#1d9bf0] disabled:opacity-50 disabled:cursor-default"
                 disabled={!input.trim() && !selectedFile} // I found this so that you have to tipe omething before you can post it with the button
                 onClick={sendPost}
               >
