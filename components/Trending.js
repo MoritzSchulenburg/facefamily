@@ -21,7 +21,7 @@ const Trending = () => {
         <TrendingList />
         <TrendingList />
         <TrendingList />
-        <TrendingList />
+        {/* <TrendingList /> */}
       </div>
     </div>
   );

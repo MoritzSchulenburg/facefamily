@@ -91,16 +91,16 @@ const Modal = () => {
             />
 
             <div className="flex justify-between items-center">
-              <div className="flex gap-4 text-[20px] text-[#1d9bf0]">
+              <div className="flex gap-4 text-[20px] text-white">
                 <BsImage />
 
-                <div className="border-[#1d9bf0] border rounded h-[18px] text-[16px] grid place-items-center">
+                <div className="border-white border rounded h-[18px] text-[16px] grid place-items-center">
                   <AiOutlineGif />
                 </div>
-                <RiBarChart2Line className="rotate-90" />
+                <RiBarChart2Line className="rotate-90 text-white" />
                 <BsEmojiSmile />
-                <IoCalendarNumberOutline className="hidden md:block" />
-                <HiOutlineLocationMarker className="hidden md:block" />
+                <IoCalendarNumberOutline className="hidden md:block text-white" />
+                <HiOutlineLocationMarker className="hidden md:block text-white" />
               </div>
 
               <button

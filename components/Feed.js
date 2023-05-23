@@ -22,7 +22,8 @@ const Feed = () => {
     <section className="sm:ml-[81px] xl:ml-[340px] w-[600px] min-h-screen border-r border-gray-400 text-white py-2">
       <div className="sticky top-0 bg-[#43726D] flex justify-between font-medium text-[30px] px-4 py-2">
         Home
-        <HiOutlineSparkles />
+        {/* <HiOutlineSparkles /> */}
+        <h1>ff</h1>
       </div>
 
       <Input />

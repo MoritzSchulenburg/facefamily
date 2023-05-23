@@ -117,21 +117,21 @@ const Input = () => {
             <div className="flex justify-between items-center">
               <div className="flex gap-4 text-[20px] text-[#1d9bf0]">
                 <label htmlFor="file">
-                  <BsImage className="cursor-pointer" />
+                  <BsImage className="cursor-pointer text-white" />
                 </label>
 
                 <input id="file" type="file" hidden onChange={addImageToPost} />
 
-                <div className="border-[#1d9bf0] border rounded h-[18px] text-[16px] grid place-items-center">
+                {/* <div className="border-[#1d9bf0] border rounded h-[18px] text-[16px] grid place-items-center">
                   <AiOutlineGif />
-                </div>
-                <RiBarChart2Line className="rotate-90" />
+                </div> */}
+                {/* <RiBarChart2Line className="rotate-90" /> */}
                 <BsEmojiSmile
-                  className="cursor-pointer"
+                  className="cursor-pointer text-white"
                   onClick={() => setShowEmojis(!showEmojis)}
                 />
-                <IoCalendarNumberOutline />
-                <HiOutlineLocationMarker />
+                <IoCalendarNumberOutline className="cursor-pointer text-white" />
+                <HiOutlineLocationMarker className="cursor-pointer text-white" />
               </div>
 
               <button
