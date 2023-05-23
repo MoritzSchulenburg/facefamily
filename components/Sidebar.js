@@ -3,7 +3,7 @@ import SidebarLink from "./SidebarLink";
 
 import { AiFillHome, AiOutlineInbox, AiOutlineUser } from "react-icons/ai";
 import { BiHash } from "react-icons/bi";
-import { BsBell, BsBookmark, BsThreeDots, BsTwitter } from "react-icons/bs";
+import { BsBell, BsBookmark, BsThreeDots } from "react-icons/bs";
 import {
   HiOutlineClipboardList,
   HiOutlineDotsCircleHorizontal,
@@ -24,11 +24,11 @@ const Sidebar = () => {
       </div>
       <div className="space-y-2 mt-4 mb-2.5 xl:ml-24">
         <SidebarLink text="Home" Icon={AiFillHome} />
-        <SidebarLink text="Explore" Icon={BiHash} />
-        <SidebarLink text="Notifications" Icon={BsBell} />
+        {/* <SidebarLink text="Explore" Icon={BiHash} />
+        <SidebarLink text="Notifications" Icon={BsBell} /> */}
         <SidebarLink text="Messages" Icon={AiOutlineInbox} />
         <SidebarLink text="Bookmarks" Icon={BsBookmark} />
-        <SidebarLink text="Lists" Icon={HiOutlineClipboardList} />
+        {/* <SidebarLink text="Lists" Icon={HiOutlineClipboardList} /> */}
         <SidebarLink text="Profile" Icon={AiOutlineUser} />
         <SidebarLink text="More" Icon={HiOutlineDotsCircleHorizontal} />
       </div>

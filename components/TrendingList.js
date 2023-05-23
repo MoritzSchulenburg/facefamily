@@ -7,7 +7,7 @@ const TrendingList = () => {
       <div>
         <p className="text-gray-500 text-[14px] mb-1">Entertainment · LIVE</p>
         <h1 className="font-medium pr-2">
-          Bigg Boss 16: Salman Khan returns with a brand new season
+          FAmily moving to Hamburg!! Any Tips and contacts?
         </h1>
       </div>
 

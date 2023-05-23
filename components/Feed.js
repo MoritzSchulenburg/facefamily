@@ -27,7 +27,7 @@ const Feed = () => {
 
       <Input />
       {posts.map((post) => (
-        <Post key={post.id} id={post.id} post={post.data()} />
+        <Post key={post.id} id={post.id} post={post.data()} /> // input refacured from the Post.js component
       ))}
     </section>
   );
