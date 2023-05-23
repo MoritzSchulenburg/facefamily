@@ -17,7 +17,7 @@ const Sidebar = () => {
 
   return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full border-r border-gray-400 pr-0 xl:pr-8">
-      <div className="flex items-center justify-center w-14 h-14 hoverEffect p-0 xl:ml-24">
+      <div className="flex items-center justify-center w-14 h-14  p-0 xl:ml-24">
         {/* <BsTwitter className="text-white text-[34px]" /> */}
         <Image src={Logo} width={300} alt="Logo" />
         <span className="ml-2 text-white text-lg font-bold">facefamily</span>

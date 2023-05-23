@@ -41,12 +41,12 @@ const SinglePost = () => {
 
   return (
     <section className="sm:ml-[81px] xl:ml-[340px] w-[600px] min-h-screen border-r border-gray-400 text-white py-2">
-      <div className="sticky top-0 bg-black flex items-center gap-4 font-medium text-[20px] px-4 py-2">
+      <div className="sticky top-0 bg-[#43726D] flex items-center gap-4 font-medium text-[20px] px-4 py-2">
         <BsArrowLeft
           className="cursor-pointer"
           onClick={() => router.push(`/`)}
         />
-        FaceFamily
+        facefamily
       </div>
 
       <Post id={id} post={post} />

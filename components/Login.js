@@ -10,7 +10,10 @@ const Login = () => {
     <div className="grid grid-cols-2">
       <div className="bg-[#43726D] h-screen grid place-items-center">
         {/* <BsTwitter className="text-white text-[200px]" /> */}
-        <Image src={Logo} width={300} alt="Logo" />
+        <div className="flex flex-col items-center">
+          <Image src={Logo} width={300} alt="Logo" />
+          <h1 className="text-[#6EA494] text-4xl mt-1">facefamily</h1>
+        </div>
       </div>
 
       {/* <div className="grid place-items-center"> */}

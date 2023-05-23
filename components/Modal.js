@@ -47,7 +47,7 @@ const Modal = () => {
       onClick={closeModal}
     >
       <div
-        className="bg-black w-[350px] md:w-[650px] text-white absolute left-[50%] translate-x-[-50%] mt-[40px] p-4 rounded-[20px]"
+        className="bg-[#43726D] w-[350px] md:w-[650px] text-white absolute left-[50%] translate-x-[-50%] mt-[40px] p-4 rounded-[20px]"
         onClick={(e) => e.stopPropagation()}
       >
         <MdClose className="text-[22px] cursor-pointer" onClick={closeModal} />
