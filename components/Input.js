@@ -135,7 +135,7 @@ const Input = () => {
               </div>
 
               <button
-                className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#6e767d] disabled:hover:bg-[#1d9bf0] disabled:opacity-50 disabled:cursor-default"
+                className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#6e767d] disabled:hover:bg-black disabled:opacity-50 disabled:cursor-default"
                 disabled={!input.trim() && !selectedFile} // I found this so that you have to tipe omething before you can post it with the button
                 onClick={sendPost}
               >

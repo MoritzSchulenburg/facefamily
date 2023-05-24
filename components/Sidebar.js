@@ -1,13 +1,8 @@
 import React from "react";
 import SidebarLink from "./SidebarLink";
-
 import { AiFillHome, AiOutlineInbox, AiOutlineUser } from "react-icons/ai";
-import { BiHash } from "react-icons/bi";
-import { BsBell, BsBookmark, BsThreeDots } from "react-icons/bs";
-import {
-  HiOutlineClipboardList,
-  HiOutlineDotsCircleHorizontal,
-} from "react-icons/hi";
+import { BsBookmark, BsThreeDots } from "react-icons/bs";
+import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Logo from "../public/TreeLogo.png";
@@ -18,22 +13,18 @@ const Sidebar = () => {
   return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full border-r border-gray-400 pr-0 xl:pr-8">
       <div className="flex items-center justify-center w-14 h-14  p-0 xl:ml-24">
-        {/* <BsTwitter className="text-white text-[34px]" /> */}
         <Image src={Logo} width={300} alt="Logo" />
         <span className="ml-2 text-white text-lg font-bold">facefamily</span>
       </div>
       <div className="space-y-2 mt-4 mb-2.5 xl:ml-24">
         <SidebarLink text="Home" Icon={AiFillHome} />
-        {/* <SidebarLink text="Explore" Icon={BiHash} />
-        <SidebarLink text="Notifications" Icon={BsBell} /> */}
         <SidebarLink text="Messages" Icon={AiOutlineInbox} />
         <SidebarLink text="Bookmarks" Icon={BsBookmark} />
-        {/* <SidebarLink text="Lists" Icon={HiOutlineClipboardList} /> */}
         <SidebarLink text="Profile" Icon={AiOutlineUser} />
         <SidebarLink text="More" Icon={HiOutlineDotsCircleHorizontal} />
       </div>
 
-      <button className="hidden xl:inline ml-auto bg-[#C4C595] text-white rounded-full w-52 h-[52px] text-lg font-bold hover:bg-[#1a8cd8]">
+      <button className="hidden xl:inline ml-auto bg-[#C4C595] text-white rounded-full w-52 h-[52px] text-lg font-bold hover:bg-black">
         POST
       </button>
 
