@@ -57,25 +57,26 @@ const Input = () => {
       tag: session.user.tag,
       text: input,
       timestamp: serverTimestamp(),
+      image: selectedFile,
     });
     // uploading and storage from the image I take from the file still not really uploading the picture here!!!:
-    const imageRef = ref(storage, `posts/${docRef.id}/image`);
-    if (selectedFile) {
-      console.log("SELECTED File: ", selectedFile);
-      try {
-        await uploadString(imageRef, selectedFile, "data_url").then(
-          async () => {
-            console.log("IMAGE REF: ", imageRef);
-            const downloadURL = await getDownloadURL(imageRef);
-            await updateDoc(doc(db, "posts", docRef.id), {
-              image: downloadURL,
-            });
-          }
-        );
-      } catch (error) {
-        console.log("ERROR in IMAGE UPLOAD: ", error);
-      }
-    }
+    // const imageRef = ref(storage, `posts/${docRef.id}/image`);
+    // if (selectedFile) {
+    //   console.log("SELECTED File: ", selectedFile);
+    //   try {
+    //     await uploadString(imageRef, selectedFile, "data_url").then(
+    //       async () => {
+    //         console.log("IMAGE REF: ", imageRef);
+    //         const downloadURL = await getDownloadURL(imageRef);
+    //         await updateDoc(doc(db, "posts", docRef.id), {
+    //           image: downloadURL,
+    //         });
+    //       }
+    //     );
+    //   } catch (error) {
+    //     console.log("ERROR in IMAGE UPLOAD: ", error);
+    //   }
+    // }
 
     setLoading(false);
     setInput("");
@@ -129,10 +130,6 @@ const Input = () => {
 
                 <input id="file" type="file" hidden onChange={addImageToPost} />
 
-                {/* <div className="border-[#1d9bf0] border rounded h-[18px] text-[16px] grid place-items-center">
-                  <AiOutlineGif />
-                </div> */}
-                {/* <RiBarChart2Line className="rotate-90" /> */}
                 <BsEmojiSmile
                   className="cursor-pointer text-white"
                   onClick={() => setShowEmojis(!showEmojis)}
