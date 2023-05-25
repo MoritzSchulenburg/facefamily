@@ -1,6 +1,6 @@
 import { signIn } from "next-auth/react";
 import React from "react";
-import { BsTwitter } from "react-icons/bs";
+
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import Logo from "../public/TreeLogo.png";

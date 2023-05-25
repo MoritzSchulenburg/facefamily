@@ -1,6 +1,5 @@
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import { AiOutlineHeart, AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
-import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 import { BsBarChart, BsTrash, BsChatDots } from "react-icons/bs";
 import Moment from "react-moment";
 
@@ -53,13 +52,6 @@ function Comment({ comment }) {
             </div>
             <span className="group-hover:text-pink-600 text-sm"></span>
           </div>
-
-          {/* <div className="icon group">
-            <AiOutlineShareAlt className="h-5 group-hover:text-[#6e767d] text-white" />
-          </div>
-          <div className="icon group">
-            <BsBarChart className="h-5 group-hover:text-[#6e767d] text-white" />
-          </div> */}
         </div>
       </div>
     </div>

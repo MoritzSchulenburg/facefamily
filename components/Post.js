@@ -159,8 +159,6 @@ const Post = ({ id, post }) => {
                 </span>
               )}
             </div>
-
-            {/* <AiOutlineShareAlt className=" w-7 h-7 p-1" /> */}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsImage, BsEmojiSmile } from "react-icons/bs";
+import { BsImage, BsEmojiSmile, BsCheckLg } from "react-icons/bs";
 import { AiOutlineGif, AiOutlineClose } from "react-icons/ai";
 import { RiBarChart2Line } from "react-icons/ri";
 import { IoCalendarNumberOutline } from "react-icons/io5";
@@ -36,7 +36,7 @@ const Input = () => {
       setSelectedFile(readerEvent.target.result);
     };
   };
-  // Copyed this Code for picking the Emoji from the internet. It works haha actually dont know how it works...
+  // Copyed this Code for picking the Emoji from the internet in Emoji Mart. It works haha actually dont know how it works...
   const addEmoji = (e) => {
     let sym = e.unified.split("-");
     let codesArray = [];
@@ -60,14 +60,21 @@ const Input = () => {
     });
     // uploading and storage from the image I take from the file still not really uploading the picture here!!!:
     const imageRef = ref(storage, `posts/${docRef.id}/image`);
-
     if (selectedFile) {
-      await uploadString(imageRef, selectedFile, "data_url").then(async () => {
-        const downloadURL = await getDownloadURL(imageRef);
-        await updateDoc(doc(db, "posts", docRef.id), {
-          image: downloadURL,
-        });
-      });
+      console.log("SELECTED File: ", selectedFile);
+      try {
+        await uploadString(imageRef, selectedFile, "data_url").then(
+          async () => {
+            console.log("IMAGE REF: ", imageRef);
+            const downloadURL = await getDownloadURL(imageRef);
+            await updateDoc(doc(db, "posts", docRef.id), {
+              image: downloadURL,
+            });
+          }
+        );
+      } catch (error) {
+        console.log("ERROR in IMAGE UPLOAD: ", error);
+      }
     }
 
     setLoading(false);
