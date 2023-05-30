@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import Image from "next/image";
+import Logo from "../public/ff.png";
 
 const Calendar = () => {
   const [events, setEvents] = useState([]);
@@ -41,8 +43,13 @@ const Calendar = () => {
   };
 
   return (
-    <section className="sm:ml-[81px] xl:ml-[340px] w-[600px] min-h-screen border-r border-gray-400 text-white py-2">
-      <h1 className="text-3xl font-bold mb-4">Calendar</h1>
+    <section className="sm:ml-[81px] xl:ml-[340px] w-full min-h-screen border-r border-gray-400 text-white py-2">
+      <div className="sticky top-0 bg-[#43726D] flex justify-between font-medium text-[30px] px-4 py-2">
+        Calender
+        {/* <HiOutlineSparkles /> */}
+        {/* <h1>ff</h1> */}
+        <Image src={Logo} width={25} alt="Logo" />
+      </div>
 
       <div className="flex justify-center">
         <form onSubmit={(e) => e.preventDefault()} className="calendar-form">
@@ -53,7 +60,7 @@ const Calendar = () => {
               id="eventTitle"
               value={eventTitle}
               onChange={handleTitleChange}
-              placeholder="Event title"
+              placeholder="Event"
             />
           </div>
 
@@ -87,14 +94,16 @@ const Calendar = () => {
           </div>
         </form>
       </div>
-
-      <FullCalendar
-        plugins={[dayGridPlugin, timeGridPlugin]}
-        initialView="dayGridMonth"
-        weekends={false}
-        events={events}
-        eventClick={handleEventClick}
-      />
+      <div className="mx-2 mt-8">
+        <FullCalendar
+          plugins={[dayGridPlugin, timeGridPlugin]}
+          initialView="dayGridMonth"
+          weekends={true}
+          events={events}
+          eventClick={handleEventClick}
+          contentHeight="auto"
+        />
+      </div>
     </section>
   );
 };
