@@ -41,50 +41,53 @@ const Calendar = () => {
   };
 
   return (
-    <div>
+    <div className="mx-auto max-w-3xl p-4">
       <h1 className="text-3xl font-bold mb-4">Calendar</h1>
 
-      <form onSubmit={(e) => e.preventDefault()} className="calendar-form">
-        <div className="form-group">
-          <label htmlFor="eventTitle">Name of the Event</label>
-          <input
-            type="text"
-            id="eventTitle"
-            value={eventTitle}
-            onChange={handleTitleChange}
-            placeholder="Event title"
-          />
-        </div>
+      <div className="flex justify-center">
+        <form onSubmit={(e) => e.preventDefault()} className="calendar-form">
+          <div className="form-group">
+            <label htmlFor="eventTitle">Name of the Event</label>
+            <input
+              type="text"
+              id="eventTitle"
+              value={eventTitle}
+              onChange={handleTitleChange}
+              placeholder="Event title"
+            />
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="eventStart">Start of the Event</label>
-          <input
-            type="datetime-local"
-            id="eventStart"
-            value={eventStart}
-            onChange={handleStartChange}
-            placeholder="Start"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="eventEnd">End of the Event</label>
-          <input
-            type="datetime-local"
-            id="eventEnd"
-            value={eventEnd}
-            onChange={handleEndChange}
-            placeholder="End"
-          />
-        </div>
-        <div className="flex items-end mt-4">
-          <button
-            onClick={handleDateSelect}
-            className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#6e767d] disabled:hover:bg-black disabled:opacity-50 disabled:cursor-default"
-          >
-            Add to Calendar
-          </button>
-        </div>
-      </form>
+          <div className="form-group">
+            <label htmlFor="eventStart">Start of the Event</label>
+            <input
+              type="datetime-local"
+              id="eventStart"
+              value={eventStart}
+              onChange={handleStartChange}
+              placeholder="Start"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="eventEnd">End of the Event</label>
+            <input
+              type="datetime-local"
+              id="eventEnd"
+              value={eventEnd}
+              onChange={handleEndChange}
+              placeholder="End"
+            />
+          </div>
+          <div className="flex items-end mt-4">
+            <button
+              onClick={handleDateSelect}
+              className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#6e767d] disabled:hover:bg-black disabled:opacity-50 disabled:cursor-default"
+            >
+              Add to Calendar
+            </button>
+          </div>
+        </form>
+      </div>
+
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin]}
         initialView="dayGridMonth"
