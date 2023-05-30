@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BsChat } from "react-icons/bs";
 import { FaRetweet } from "react-icons/fa";
-import { AiOutlineHeart, AiOutlineShareAlt, AiFillHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import Moment from "react-moment";
 
@@ -89,6 +89,7 @@ const Post = ({ id, post }) => {
             className="h-12 w-12 rounded-full object-cover"
             src={post?.userImg}
             alt=""
+            referrerPolicy="no-referrer"
           />
         </div>
 

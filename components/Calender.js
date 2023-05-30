@@ -43,6 +43,7 @@ const Calendar = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">Calendar</h1>
+
       <form onSubmit={(e) => e.preventDefault()} className="calendar-form">
         <div className="form-group">
           <label htmlFor="eventTitle">Name of the Event</label>
@@ -54,6 +55,7 @@ const Calendar = () => {
             placeholder="Event title"
           />
         </div>
+
         <div className="form-group">
           <label htmlFor="eventStart">Start of the Event</label>
           <input
@@ -74,8 +76,11 @@ const Calendar = () => {
             placeholder="End"
           />
         </div>
-        <div className="form-group button-group">
-          <button onClick={handleDateSelect} className="add-button">
+        <div className="flex items-end mt-4">
+          <button
+            onClick={handleDateSelect}
+            className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#6e767d] disabled:hover:bg-black disabled:opacity-50 disabled:cursor-default"
+          >
             Add to Calendar
           </button>
         </div>

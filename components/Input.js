@@ -145,7 +145,6 @@ const Input = () => {
                   onClick={() => setShowEmojis(!showEmojis)}
                 />
                 <IoCalendarNumberOutline className="cursor-pointer text-white" />
-                <HiOutlineLocationMarker className="cursor-pointer text-white" />
               </div>
 
               <button

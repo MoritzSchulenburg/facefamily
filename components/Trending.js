@@ -10,12 +10,12 @@ const Trending = () => {
         <input
           className="bg-transparent w-[100%] outline-none text-white placeholder-white text-opacity-90"
           type="text"
-          placeholder="Search facefamily "
+          placeholder="Search Events "
         />
       </div>
 
       <div className="bg-[#6EA494] rounded-[20px] text-white mt-4 px-4 py-4">
-        <h1 className="text-[20px] font-medium">Latest Family News</h1>
+        <h1 className="text-[20px] font-medium">Next Family Events</h1>
 
         <TrendingList />
         <TrendingList />

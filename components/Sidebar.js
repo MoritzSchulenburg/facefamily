@@ -1,11 +1,12 @@
 import React from "react";
 import SidebarLink from "./SidebarLink";
-import { AiFillHome, AiOutlineInbox, AiOutlineUser } from "react-icons/ai";
-import { BsBookmark, BsThreeDots } from "react-icons/bs";
+import { AiFillHome, AiOutlineInbox } from "react-icons/ai";
+import { BsThreeDots } from "react-icons/bs";
 import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Logo from "../public/TreeLogo.png";
+import { AiOutlineCalendar, AiOutlineHeart } from "react-icons/ai";
 
 const Sidebar = () => {
   const { data: session } = useSession();
@@ -17,11 +18,19 @@ const Sidebar = () => {
         <span className="ml-2 text-white text-lg font-bold">facefamily</span>
       </div>
       <div className="space-y-2 mt-4 mb-2.5 xl:ml-24">
-        <SidebarLink text="Home" Icon={AiFillHome} />
-        <SidebarLink text="Messages" Icon={AiOutlineInbox} />
-        <SidebarLink text="Likes" Icon={BsBookmark} />
-        <SidebarLink text="Profile" Icon={AiOutlineUser} />
-        <SidebarLink text="More" Icon={HiOutlineDotsCircleHorizontal} />
+        <SidebarLink href="/" text="Home" Icon={AiFillHome} />
+        <SidebarLink href="/" text="Messages" Icon={AiOutlineInbox} />
+        <SidebarLink href="/" text="Likes" Icon={AiOutlineHeart} />
+        <SidebarLink
+          href="/calendar"
+          text="Calendar"
+          Icon={AiOutlineCalendar}
+        />
+        <SidebarLink
+          href="/"
+          text="More"
+          Icon={HiOutlineDotsCircleHorizontal}
+        />
       </div>
 
       <button className="hidden xl:inline ml-auto bg-[#C4C595] text-white rounded-full w-52 h-[52px] text-lg font-bold hover:bg-black">
