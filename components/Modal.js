@@ -92,29 +92,20 @@ const Modal = () => {
 
             <div className="flex justify-between items-center">
               <div className="flex gap-4 text-[20px] text-white">
-                <BsImage />
-
-                <div className="border-white border rounded h-[18px] text-[16px] grid place-items-center">
-                  <AiOutlineGif />
-                </div>
-                <RiBarChart2Line className="rotate-90 text-white" />
-                <BsEmojiSmile />
-                <IoCalendarNumberOutline className="hidden md:block text-white" />
-                <HiOutlineLocationMarker className="hidden md:block text-white" />
+                <button
+                  className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#6e767d] disabled:hover:bg-[#6e767d] disabled:opacity-50 disabled:cursor-default"
+                  disabled={!input.trim()}
+                  onClick={sendComment}
+                >
+                  POST
+                </button>
               </div>
-
-              <button
-                className="bg-[#C4C595] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#1a8cd8] disabled:hover:bg-[#1d9bf0] disabled:opacity-50 disabled:cursor-default"
-                disabled={!input.trim()}
-                onClick={sendComment}
-              >
-                POST
-              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    // </div>
   );
 };
 
