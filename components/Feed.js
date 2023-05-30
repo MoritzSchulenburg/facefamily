@@ -3,6 +3,8 @@ import Input from "./Input";
 import Post from "./Post";
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
+import Image from "next/image";
+import Logo from "../public/ff.png";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -22,7 +24,8 @@ const Feed = () => {
       <div className="sticky top-0 bg-[#43726D] flex justify-between font-medium text-[30px] px-4 py-2">
         Home
         {/* <HiOutlineSparkles /> */}
-        <h1>ff</h1>
+        {/* <h1>ff</h1> */}
+        <Image src={Logo} width={25} alt="Logo" />
       </div>
 
       <Input />

@@ -17,6 +17,7 @@ import {
 } from "firebase/firestore";
 import { db, storage } from "../firebase";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
+import { FcRemoveImage } from "react-icons/fc";
 
 const Input = () => {
   const { data: session } = useSession();
@@ -85,6 +86,8 @@ const Input = () => {
           image: downloadURL,
         });
       });
+
+      FcRemoveImage;
     }
     // }
 

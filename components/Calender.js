@@ -41,7 +41,7 @@ const Calendar = () => {
   };
 
   return (
-    <div className="mx-auto max-w-3xl p-4">
+    <section className="sm:ml-[81px] xl:ml-[340px] w-[600px] min-h-screen border-r border-gray-400 text-white py-2">
       <h1 className="text-3xl font-bold mb-4">Calendar</h1>
 
       <div className="flex justify-center">
@@ -95,7 +95,7 @@ const Calendar = () => {
         events={events}
         eventClick={handleEventClick}
       />
-    </div>
+    </section>
   );
 };
 
