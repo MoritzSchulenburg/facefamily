@@ -87,7 +87,7 @@ const Input = () => {
         });
       });
 
-      FcRemoveImage;
+      // FcRemoveImage;
     }
     // }
 

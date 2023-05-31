@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import Image from "next/image";
 import Logo from "../public/ff.png";
+import { addDoc, collection, onSnapshot } from "firebase/firestore";
+import { db, storage } from "../firebase";
+import { query, orderBy } from "firebase/firestore";
 
 const Calendar = () => {
   const [events, setEvents] = useState([]);
@@ -11,7 +14,16 @@ const Calendar = () => {
   const [eventStart, setEventStart] = useState("");
   const [eventEnd, setEventEnd] = useState("");
 
-  const handleDateSelect = (selectInfo) => {
+  useEffect(
+    () =>
+      onSnapshot(query(collection(db, "events")), (snapshot) => {
+        console.log(snapshot.docs);
+        setEvents(snapshot.docs.map((e) => e.data()));
+      }),
+    []
+  );
+
+  const handleDateSelect = async (selectInfo) => {
     const { start, end } = selectInfo;
 
     const newEvent = {
@@ -19,7 +31,8 @@ const Calendar = () => {
       start: eventStart,
       end: eventEnd,
     };
-
+    //hier zu firebase schicken
+    const docRef = await addDoc(collection(db, "events"), newEvent);
     setEvents([...events, newEvent]);
   };
 

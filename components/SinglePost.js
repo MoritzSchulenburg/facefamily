@@ -46,7 +46,7 @@ const SinglePost = () => {
           className="cursor-pointer"
           onClick={() => router.push(`/`)}
         />
-        facefamily
+        Comments
       </div>
 
       <Post id={id} post={post} />

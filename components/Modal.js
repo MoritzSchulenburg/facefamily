@@ -1,10 +1,6 @@
 import React, { useContext, useState } from "react";
 import { MdClose } from "react-icons/md";
-import { BsImage, BsEmojiSmile } from "react-icons/bs";
-import { AiOutlineGif, AiOutlineClose } from "react-icons/ai";
-import { RiBarChart2Line } from "react-icons/ri";
-import { IoCalendarNumberOutline } from "react-icons/io5";
-import { HiOutlineLocationMarker } from "react-icons/hi";
+
 import { useSession } from "next-auth/react";
 import { AppContext } from "../contexts/AppContext";
 import Moment from "react-moment";
