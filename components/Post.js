@@ -18,6 +18,7 @@ import {
 } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { AppContext } from "../contexts/AppContext";
+// import { lowerFirst } from "lodash";
 
 const Post = ({ id, post }) => {
   const [likes, setLikes] = useState([]); //For the like heart give a like (async function further down)
@@ -38,7 +39,7 @@ const Post = ({ id, post }) => {
         ),
         (snapshot) => setComments(snapshot.docs)
       ),
-    [db, id]
+    [id]
   );
 
   useEffect(
@@ -46,7 +47,7 @@ const Post = ({ id, post }) => {
       onSnapshot(collection(db, "posts", id, "likes"), (snapshot) =>
         setLikes(snapshot.docs)
       ),
-    [db, id]
+    [id]
   );
 
   useEffect(

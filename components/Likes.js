@@ -11,3 +11,11 @@ export default function Likes() {
     </section>
   );
 }
+
+// useEffect(
+//   () =>
+//     onSnapshot(collection(db, "posts", id, "likes"), (snapshot) =>
+//       setLikes(snapshot.docs)
+//     ),
+//   [id]
+// );

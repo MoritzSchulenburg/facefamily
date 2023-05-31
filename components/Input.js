@@ -18,6 +18,7 @@ import {
 import { db, storage } from "../firebase";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import { FcRemoveImage } from "react-icons/fc";
+import Image from "next/image";
 
 const Input = () => {
   const { data: session } = useSession();
@@ -101,10 +102,12 @@ const Input = () => {
     <div className={`mt-4 px-4 ${loading && "opacity-60"}`}>
       <div className="grid grid-cols-[48px,1fr] gap-4">
         <div>
-          <img
+          <Image
             className="h-12 w-12 rounded-full object-contain"
             src={session?.user?.image}
             alt=""
+            width="200"
+            height="200"
           />
         </div>
 
