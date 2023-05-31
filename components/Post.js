@@ -4,7 +4,7 @@ import { FaRetweet } from "react-icons/fa";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import Moment from "react-moment";
-
+import Image from "next/image";
 import { db } from "../firebase";
 import { useRouter } from "next/router";
 import {
@@ -86,10 +86,12 @@ const Post = ({ id, post }) => {
     >
       <div className="grid grid-cols-[48px,1fr] gap-4">
         <div>
-          <img
+          <Image
             className="h-12 w-12 rounded-full object-cover"
             src={post?.userImg}
             alt=""
+            width="200"
+            height="200"
             referrerPolicy="no-referrer"
           />
         </div>

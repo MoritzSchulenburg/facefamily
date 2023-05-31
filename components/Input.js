@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { BsImage, BsEmojiSmile, BsCheckLg } from "react-icons/bs";
-import { AiOutlineGif, AiOutlineClose } from "react-icons/ai";
-import { RiBarChart2Line } from "react-icons/ri";
+import { AiOutlineClose } from "react-icons/ai";
 import { IoCalendarNumberOutline } from "react-icons/io5";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 import { useSession } from "next-auth/react";
-
+import Image from "next/image";
 import data from "@emoji-mart/data";
 import Picker from "@emoji-mart/react";
 import {
@@ -18,7 +16,6 @@ import {
 import { db, storage } from "../firebase";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import { FcRemoveImage } from "react-icons/fc";
-import Image from "next/image";
 
 const Input = () => {
   const { data: session } = useSession();
@@ -129,9 +126,11 @@ const Input = () => {
                 <AiOutlineClose className="text-white h-5" />
               </div>
 
-              <img
+              <Image
                 src={selectedFile}
                 alt=""
+                width="200"
+                height="200"
                 className="rounded-2xl max-h-80 object-contain"
               />
             </div>
@@ -150,7 +149,7 @@ const Input = () => {
                   className="cursor-pointer text-white"
                   onClick={() => setShowEmojis(!showEmojis)}
                 />
-                <IoCalendarNumberOutline className="cursor-pointer text-white" />
+                {/* <IoCalendarNumberOutline className="cursor-pointer text-white" /> */}
               </div>
 
               <button

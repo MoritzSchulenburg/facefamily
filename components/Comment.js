@@ -36,22 +36,13 @@ function Comment({ comment }) {
               {comment?.comment}
             </p>
           </div>
-          {/* <div className="icon group flex-shrink-0">
-            <BiDotsHorizontalRounded className="h-5 text-[#6e767d] group-hover:text-[#6e767d] text-white" />
-          </div>
-        </div>
 
-        <div className="text-[#6e767d] flex justify-between w-10/12">
-          <div className="icon group">
-            <BsChatDots className="h-5 group-hover:text-[#6e767d] text-white" />
-          </div> */}
-
-          <div className="flex items-center space-x-1 group">
-            <div className="icon group-hover:bg-pink-600/10">
+          {/* <div className="flex items-center space-x-1 group"> */}
+          {/* <div className="icon group-hover:bg-pink-600/10">
               <AiOutlineHeart className="h-5 group-hover:text-pink-600 text-white" />
-            </div>
-            <span className="group-hover:text-pink-600 text-sm"></span>
-          </div>
+            </div> */}
+          {/* <span className="group-hover:text-pink-600 text-sm"></span> */}
+          {/* </div> */}
         </div>
       </div>
     </div>
