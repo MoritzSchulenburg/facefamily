@@ -36,6 +36,19 @@ const Sidebar = () => {
       {/* <button className="hidden xl:inline ml-auto bg-[#C4C595] text-white rounded-full w-52 h-[52px] text-lg font-bold hover:bg-black">
         POST
       </button> */}
+      <div class="flex items-center justify-center p-0 xl:ml-24 mt-10">
+        <div class="flex flex-col items-center">
+          <img
+            src={session?.user?.image}
+            alt=""
+            class="h-40 w-40 rounded-full xl:mr-2.5"
+          />
+          <div class="text-center">
+            <h4 class="font-bold text-white">{session?.user?.name}</h4>
+            <p class="text-[#C4C595]">@{session?.user?.tag}</p>
+          </div>
+        </div>
+      </div>
 
       <div
         className="text-[#d9d9d9] flex items-center justify-center mt-auto hoverEffect xl:ml-auto xl:-mr-5 px-4 py-2"
@@ -47,9 +60,9 @@ const Sidebar = () => {
           className="h-10 w-10 rounded-full xl:mr-2.5"
         />
         <div className="hidden xl:inline leading-5">
-          <h4 className="font-bold">{session?.user?.name}</h4>
-          <p className="text-[#6e767d]">@{session?.user?.tag}</p>
+          <h4 className="font-bold">Logout</h4>
         </div>
+
         <BsThreeDots className="h-5 hidden xl:inline ml-10" />
       </div>
     </div>
