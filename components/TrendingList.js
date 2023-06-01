@@ -9,12 +9,12 @@ const DATE_OPTION = {
 };
 
 const TrendingList = ({ eventTitle, eventStart }) => {
-  console.log("Im in Trendinglist", typeof eventStart);
+  // console.log("Im in Trendinglist", typeof eventStart);
   let formattedStart = new Date(eventStart).toLocaleString(
     "en-GB",
     DATE_OPTION
   );
-  console.log("Im in Trendinglist formattedStart", formattedStart);
+  // console.log("Im in Trendinglist formattedStart", formattedStart);
 
   return (
     <div className="mt-4 flex items-center">

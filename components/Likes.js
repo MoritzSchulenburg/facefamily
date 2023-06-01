@@ -9,11 +9,12 @@ export default function Likes() {
 
   useEffect(() => {
     const fetchLikedPosts = async () => {
-      const userId = "id";
-      const likedPostsRef = collection(db, "posts", userId, "likes");
+      const Id = "id";
+      const likedPostsRef = collection(db, "posts", Id, "likes");
       const snapshot = await getDocs(likedPostsRef);
       const likedPostsData = snapshot.docs.map((doc) => doc.data());
       setLikedPosts(likedPostsData);
+      console.log(likedPostsData);
     };
 
     fetchLikedPosts();
