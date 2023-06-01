@@ -36,12 +36,26 @@ const Calendar = () => {
     setEvents([...events, newEvent]);
   };
 
-  const handleEventClick = (clickInfo) => {
+  const handleEventClickText = (clickInfo) => {
     const newText = prompt("Enter text:", clickInfo.event.title);
     if (newText !== null) {
       clickInfo.event.setProp("title", newText);
     }
   };
+
+  // const handleEventClickStart = (clickInfo) => {
+  //   const newStart = prompt("Enter start:", clickInfo.event.start);
+  //   if (newStart !== null) {
+  //     clickInfo.event.setProp("start", newStart);
+  //   }
+  // };
+
+  // const handleEventClickEnd = (clickInfo) => {
+  //   const newEnd = prompt("Enter end:", clickInfo.event.end);
+  //   if (newEnd !== null) {
+  //     clickInfo.event.setProp("end", newEnd);
+  //   }
+  // };
 
   const handleTitleChange = (event) => {
     setEventTitle(event.target.value);
@@ -111,7 +125,7 @@ const Calendar = () => {
           initialView="dayGridMonth"
           weekends={true}
           events={events}
-          eventClick={handleEventClick}
+          eventClick={handleEventClickText}
           contentHeight="auto"
         />
       </div>

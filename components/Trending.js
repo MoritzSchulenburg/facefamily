@@ -15,7 +15,7 @@ const Trending = () => {
 
   useEffect(() => {
     const unsubscribe = onSnapshot(
-      query(collection(db, "events"), orderBy("start"), limit(3)),
+      query(collection(db, "events"), orderBy("start"), limit(5)),
       (snapshot) => {
         const eventList = snapshot.docs.map((doc) => doc.data());
         setEvents(eventList);
