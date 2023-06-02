@@ -2,7 +2,7 @@ import Image from "next/image";
 import Logo from "../public/ff.png";
 import { useState, useEffect } from "react";
 import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 
 export default function Likes() {
   const [likedPosts, setLikedPosts] = useState([]);

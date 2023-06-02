@@ -41,12 +41,13 @@ const Trending = () => {
       </div>
 
       <div className="bg-[#6EA494] rounded-[20px] text-white sticky top-40 mt-4 px-4 py-4">
-        <h1 className="text-[20px] font-medium">Next Family Events</h1>
+        <h1 className="text-[27px] ">Next Events</h1>
         {events.map((event, index) => (
           <TrendingList
             key={index}
             eventTitle={event.title}
             eventStart={event.start}
+            eventEnd={event.end}
           />
         ))}
       </div>
