@@ -6,7 +6,11 @@ import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Logo from "../public/TreeLogo.png";
-import { AiOutlineCalendar, AiOutlineHeart } from "react-icons/ai";
+import {
+  AiOutlineCalendar,
+  AiOutlineHeart,
+  AiOutlinePicture,
+} from "react-icons/ai";
 
 const Sidebar = () => {
   const { data: session } = useSession();
@@ -26,6 +30,7 @@ const Sidebar = () => {
           text="Calendar"
           Icon={AiOutlineCalendar}
         />
+        <SidebarLink href="/pictures" text="Pictures" Icon={AiOutlinePicture} />
         <SidebarLink
           href="/"
           text="More"
