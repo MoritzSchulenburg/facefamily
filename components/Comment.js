@@ -10,6 +10,7 @@ function Comment({ comment }) {
         src={comment?.userImg}
         alt=""
         className="h-11 w-11 rounded-full mr-4"
+        referrerPolicy="no-referrer"
       />
       <div className="flex flex-col space-y-2 w-full">
         <div className="flex justify-between">

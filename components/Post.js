@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BsChat } from "react-icons/bs";
-import { FaRetweet } from "react-icons/fa";
+import { GiTreeBranch } from "react-icons/Gi";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import Moment from "react-moment";
@@ -19,6 +19,8 @@ import {
 import { useSession } from "next-auth/react";
 import { AppContext } from "../contexts/AppContext";
 // import { lowerFirst } from "lodash";
+import Logo from "../public/ff.png";
+import green from "../public/green ff.png";
 
 const Post = ({ id, post }) => {
   const [likes, setLikes] = useState([]); //For the like heart give a like (async function further down)
@@ -133,8 +135,9 @@ const Post = ({ id, post }) => {
             </div>
 
             {session.user.uid !== post?.id ? (
-              <FaRetweet className=" w-7 h-7 p-1" />
+              <GiTreeBranch className=" w-7 h-7 p-1 text-[#6EA494]" />
             ) : (
+              // <Image src={green} width={15} alt="Logo" />
               <RiDeleteBin5Line
                 className=" w-7 h-7 p-1"
                 onClick={(e) => {

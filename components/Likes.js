@@ -8,16 +8,14 @@ export default function Likes() {
   const [likedPosts, setLikedPosts] = useState([]);
 
   useEffect(() => {
-    const fetchLikedPosts = async () => {
-      const Id = "id";
-      const likedPostsRef = collection(db, "posts", Id, "likes");
-      const snapshot = await getDocs(likedPostsRef);
-      const likedPostsData = snapshot.docs.map((doc) => doc.data());
-      setLikedPosts(likedPostsData);
-      console.log(likedPostsData);
-    };
-
-    fetchLikedPosts();
+    const querySnapshot = getDocs(
+      collection(db, "posts", "MJEzwHYjlzJ2xRjeaaco", "likes")
+    ).then((docs) => {
+      docs.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+      });
+    });
   }, []);
 
   return (

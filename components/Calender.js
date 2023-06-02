@@ -79,19 +79,24 @@ const Calendar = () => {
       <div className="flex justify-center">
         <form onSubmit={(e) => e.preventDefault()} className="calendar-form">
           <div className="form-group">
-            <label htmlFor="eventTitle">Name of the Event</label>
+            <label className="text-white" htmlFor="eventTitle">
+              Name of the Event
+            </label>
             <input
               type="text"
               id="eventTitle"
               value={eventTitle}
               onChange={handleTitleChange}
-              placeholder="Event"
+              placeholder="Name of Event"
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="eventStart">Start of the Event</label>
+            <label className="text-white" htmlFor="eventStart">
+              Start of the Event
+            </label>
             <input
+              className="text-[#2c3c54]"
               type="datetime-local"
               id="eventStart"
               value={eventStart}
@@ -100,8 +105,11 @@ const Calendar = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="eventEnd">End of the Event</label>
+            <label className="text-white" htmlFor="eventEnd">
+              End of the Event
+            </label>
             <input
+              className="text-[#2c3c54]"
               type="datetime-local"
               id="eventEnd"
               value={eventEnd}
