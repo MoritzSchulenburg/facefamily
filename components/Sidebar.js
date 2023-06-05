@@ -24,13 +24,14 @@ const Sidebar = () => {
       <div className="space-y-2 mt-4 mb-2.5 xl:ml-24">
         <SidebarLink href="/" text="Home" Icon={AiFillHome} />
         {/* <SidebarLink href="/" text="Messages" Icon={AiOutlineInbox} /> */}
-        <SidebarLink href="/likes" text="Likes" Icon={AiOutlineHeart} />
+
         <SidebarLink
           href="/calendar"
           text="Calendar"
           Icon={AiOutlineCalendar}
         />
         <SidebarLink href="/pictures" text="Pictures" Icon={AiOutlinePicture} />
+        <SidebarLink href="/likes" text="Likes" Icon={AiOutlineHeart} />
         <SidebarLink
           href="/"
           text="More"
